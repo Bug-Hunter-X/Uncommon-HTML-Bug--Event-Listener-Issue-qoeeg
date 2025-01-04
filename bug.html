@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrect way to add event listeners:
+    document.getElementById('myDiv').addEventListener('click', function() {
+      // this would cause an error in some scenarios
+      this.style.display = "none";
+    });
+  </script>
+</body>
+</html>
